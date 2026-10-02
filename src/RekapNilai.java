@@ -20,6 +20,7 @@ public class RekapNilai {
             if (nilai < 0 || nilai > 100) {
                 System.out.println("Ditolak");
                 continue;
+                //perintah untuk perhentian angka -1.
             }
 
 
@@ -35,6 +36,8 @@ public class RekapNilai {
             } else {
                 grade = 'E';
             }
+            //kalau kita memasukkan angka 101 atau lebih akan di tolak, dan kembali lagi menjadi nomor 1.
+            //kalau di input angka 0-100 angka akan terus berjalan. Angka yang kita masukkan akana muncul grade dan keterangannya
             //Kalau >= 60 yang di paling atas hasil dari 85 itu Grade :D - Kurang
             String keterangan = switch (grade) {
                 case 'A' -> "Sangat Baik";
@@ -57,6 +60,7 @@ public class RekapNilai {
         if (jumlah > 0) {
             double rata = total / jumlah;
             String status = rata >= 60 ? "LULUS" : "Tidak Lulus";
+            //Kalau rata-ratanya 60 ke atas akan dinyatakan lulus, tetapi kalau nilai rata-ratanya 59 ke bawah akan di nyatakan tidak lulus
             System.out.println("Rata-rata   : " + String.format("%.2f", rata));
             System.out.println("Status      : " + status);
         }
