@@ -14,13 +14,15 @@ public class RekapNilai {
             nilai = sc.nextInt();
 
             if (nilai == SELESAI) {
-                continue;
+                break;
             }
 
             if (nilai < 0 || nilai > 100) {
                 System.out.println("Ditolak");
                 continue;
             }
+
+
             char grade;
             if (nilai >= 90) {
                 grade = 'A';
@@ -46,12 +48,19 @@ public class RekapNilai {
             total += nilai;
             jumlah++;
 
-        } while (nilai != SELESAI);
+        } while (true);
 
 
+        System.out.println();
+        System.out.println("Nilai yang sebenarnya   : " + jumlah);
+
+        if (jumlah > 0) {
+            double rata = total / jumlah;
+            String status = rata >= 60 ? "LULUS" : "GAGAL";
+            System.out.println("Rata-rata   : " + String.format("%.2f", rata));
+            System.out.println("Status      : " + status);
         }
+
+        sc.close();
     }
-
-
-
-
+}
