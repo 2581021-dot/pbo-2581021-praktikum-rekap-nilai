@@ -35,7 +35,7 @@ public class RekapNilai {
             } else {
                 grade = 'E';
             }
-
+            //Kalau >= 60 yang di paling atas hasil dari 85 itu Grade :D - Kurang
             String keterangan = switch (grade) {
                 case 'A' -> "Sangat Baik";
                 case 'B' -> "Baik";
@@ -56,7 +56,7 @@ public class RekapNilai {
 
         if (jumlah > 0) {
             double rata = total / jumlah;
-            String status = rata >= 60 ? "LULUS" : "GAGAL";
+            String status = rata >= 60 ? "LULUS" : "Tidak Lulus";
             System.out.println("Rata-rata   : " + String.format("%.2f", rata));
             System.out.println("Status      : " + status);
         }
